@@ -1,4 +1,14 @@
 -- Crie uma consulta que retorne as colunas CustomerId, FirstName, LastName e Address das pessoas consumidoras brasileiras
+SELECT DISTINCT
+CustomerId as id,
+LOWER (FirstName) as nome,
+UPPER (LastName) as sobrenome,
+FirstName || ' ' || LastName as nome_completo,
+REPLACE (Address, 'Av' as 'Avenida')
+FROM
+customers
+WHERE
+Country LIKE 'Brazil';
 
 
 -- Na consulta anterior, converta o sobrenome para letras maiúsculas

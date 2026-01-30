@@ -1,4 +1,15 @@
 -- Construa uma consulta para a tabela "invoice_items" que retorne apenas as colunas InvoiceId, TrackId e UnitPrice.
+SELECT
+InvoiceId,
+TrackId,
+UnitPrice,
+UnitPrice * 1.3,
+UnitPrice + 0,37,
+UnitPrice 
+FROM
+invoice_items
+WHERE InvoiceId >5
+AND InvoiceId != 10;
 
 -- Inclua nessa consulta mais três colunas, cada uma como resultado de uma operação aritmética diferente
 
